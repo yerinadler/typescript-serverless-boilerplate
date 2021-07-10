@@ -1,0 +1,35 @@
+service: typescript-serverless-boilerplate
+frameworkVersion: 2
+plugins:
+  - serverless-dotenv-plugin
+  - serverless-webpack
+  - serverless-offline
+custom:
+  webpack:
+    webpackConfig: './webpack.config.js'
+    includeModules: true
+provider:
+  name: aws
+  stage: dev
+  region: ap-southeast-1
+  runtime: nodejs14.x
+  apiGateway:
+    minimumCompressionSize: 1024
+    shouldStartNameWithService: true
+  lambdaHashingVersion: 20201221
+functions:
+  hello:
+    handler: src/handlers/hello.handler
+    events:
+      - http:
+          method: get
+          path: hello
+  command:
+    handler: src/handlers/command.handler
+    events:
+      - http:
+          method: post
+          path: command
+
+
+  
