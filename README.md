@@ -10,11 +10,11 @@ Make sure you have `NodeJS 14` or later installed along with `npm` or `yarn`
 ### Packages & Dependencies
 | Tool        | Library     | Version |
 | ----------- | ----------- | ------- |
-| IoC Container| Inversify | |
-| Environment Management | serverless-dotenv-plugin | |
-| Middleware | Middy | |
-| Local Development | serverless-offline | |
-| Test Runner | Jest | |
-| Code Bundler | Webpack | |
-| Linter | EsLint | |
+| IoC Container| Inversify | 5.1.1+ |
+| Environment Management | serverless-dotenv-plugin | 3.9.0+ |
+| Middleware | Middy | 2.4.3+ |
+| Local Development | serverless-offline | 7.0.0+ |
+| Test Runner | Jest | 27.0.6+ |
+| Code Bundler | Webpack | 5.44.0+ |
+| Linter | EsLint | 7.30.0+ |
 
