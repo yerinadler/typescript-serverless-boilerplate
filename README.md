@@ -5,9 +5,9 @@ A TypeScript boilerplate designed for AWS Lambda via Serverless framework
 The boilerplate comes with 2 functions that can be used as an example. One for GET request and another one for POST request. The latter incorporates Middy as a middleware to validate the request body
 
 ## Setup
-Make sure you have `NodeJS 14` or later installed along with `npm` or `yarn`
+Make sure you have `NodeJS 14` or later installed along with `npm` or `yarn`. Do copy the `.env_example` into `.env` file for managing environment variables for local development or create one your own
 
-### Packages & Dependencies
+## Packages & Dependencies
 | Tool        | Library     | Version |
 | ----------- | ----------- | ------- |
 | IoC Container| Inversify | 5.1.1+ |
@@ -17,4 +17,29 @@ Make sure you have `NodeJS 14` or later installed along with `npm` or `yarn`
 | Test Runner | Jest | 27.0.6+ |
 | Code Bundler | Webpack | 5.44.0+ |
 | Linter | EsLint | 7.30.0+ |
+
+## Project Structure
+The project code is primarily stored in the `src` folder except some of the setup files e.g. Jest config, Webpack config, EsLine config, etc.
+
+The Lambda handlers are in the `interfaces/handlers` directory along with `middlewares` and other `utils`
+
+The overall project structure is shown below
+````
+├── src
+│   ├── services
+│   ├── data
+│   ├── interfaces
+│   │   ├── handlers
+│   │   ├── middlewares
+│   │   └── utils
+│   ├── configuration.ts
+│   ├── inversify.config.ts
+│   └── types.ts
+├── jest.config.js
+├── jest.setup.ts
+├── package.json
+├── serverless.yml
+├── tsconfig.json
+├── webpack.config.js
+````
 

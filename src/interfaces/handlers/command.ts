@@ -1,15 +1,14 @@
 import middy from '@middy/core';
 import jsonBodyParser from '@middy/http-json-body-parser';
 import validator from '@middy/validator';
-import { APIGatewayProxyEvent, Context } from 'aws-lambda';
+import { APIGatewayProxyEvent } from 'aws-lambda';
 
 import { errorHandlingMiddleware } from '../middlewares/error.middleware';
+import { ok } from '../utils/response';
 
-const baseHandler = async (event: APIGatewayProxyEvent, context: Context) => {
-  return {
-    statusCode: 200,
-    body: JSON.stringify({ event, context })
-  };
+const baseHandler = async (event: APIGatewayProxyEvent) => {
+  const { body } = event;
+  return ok('Successfully get the data', body);
 };
 
 const inputSchema = {
