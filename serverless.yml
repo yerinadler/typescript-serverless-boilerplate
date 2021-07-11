@@ -19,13 +19,13 @@ provider:
   lambdaHashingVersion: 20201221
 functions:
   hello:
-    handler: src/handlers/hello.handler
+    handler: src/interfaces/handlers/hello.handler
     events:
       - http:
           method: get
           path: hello
   command:
-    handler: src/handlers/command.handler
+    handler: src/interfaces/handlers/command.handler
     events:
       - http:
           method: post

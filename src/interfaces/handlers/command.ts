@@ -1,8 +1,9 @@
 import middy from '@middy/core';
-import httpErrorHandler from '@middy/http-error-handler';
 import jsonBodyParser from '@middy/http-json-body-parser';
 import validator from '@middy/validator';
 import { APIGatewayProxyEvent, Context } from 'aws-lambda';
+
+import { errorHandlingMiddleware } from '../middlewares/error.middleware';
 
 const baseHandler = async (event: APIGatewayProxyEvent, context: Context) => {
   return {
@@ -25,6 +26,4 @@ const inputSchema = {
 };
 
 export const handler = middy(baseHandler)
-  .use(jsonBodyParser())
-  .use(validator({ inputSchema }))
-  .use(httpErrorHandler());
+  .use([jsonBodyParser(), validator({ inputSchema }), errorHandlingMiddleware()]);

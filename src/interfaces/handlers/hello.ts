@@ -2,8 +2,8 @@ import { APIGatewayProxyEvent, APIGatewayProxyResult } from 'aws-lambda';
 
 import configuration from 'src/configuration';
 
-import container from '../inversify.config';
-import { TYPES } from '../types';
+import container from '../../inversify.config';
+import { TYPES } from '../../types';
 
 import { HelloService } from '#services/hello.service';
 
