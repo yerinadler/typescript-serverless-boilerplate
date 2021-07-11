@@ -5,7 +5,14 @@ A TypeScript boilerplate designed for AWS Lambda via Serverless framework
 The boilerplate comes with 2 functions that can be used as an example. One for GET request and another one for POST request. The latter incorporates Middy as a middleware to validate the request body
 
 ## Setup
-Make sure you have `NodeJS 14` or later installed along with `npm` or `yarn`. Do copy the `.env_example` into `.env` file for managing environment variables for local development or create one your own
+Make sure you have `NodeJS 14` or later installed along with `npm` or `yarn`. And follow below steps to get started.
+
+You also need `serverless` command to be available which could be accomplished using the command `yarn global add serverless` or `npm install -g serverless` 
+
+
+1. Copy the `.env_example` into `.env` file for managing environment variables for local development or create one your own
+2. Run `yarn` or `npm install` to install dependencies
+3. Run the command `yarn start:dev` to start the local development server (via serverless-offline plugin)
 
 ## Packages & Dependencies
 | Tool        | Library     | Version |

@@ -8,9 +8,12 @@ custom:
   webpack:
     webpackConfig: './webpack.config.js'
     includeModules: true
+  sampling:
+    dev:  development
+    prod: production
 provider:
   name: aws
-  stage: dev
+  stage: ${opt:stage, 'dev'}
   region: ap-southeast-1
   runtime: nodejs14.x
   apiGateway:

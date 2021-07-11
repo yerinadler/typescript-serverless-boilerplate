@@ -6,6 +6,7 @@
   "author": "Yerin J. Adler <yerin.adler@gmail.com>",
   "license": "MIT",
   "scripts": {
+    "start:dev": "serverless offline start",
     "test": "jest"
   },
   "dependencies": {
