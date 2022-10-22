@@ -13,6 +13,8 @@ export const errorHandlingMiddleware = () => {
         message = getReasonPhrase(500)
       }
     } = request;
+
+    console.log('test')
     
     request.response = {
       statusCode,

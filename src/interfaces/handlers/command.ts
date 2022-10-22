@@ -7,6 +7,7 @@ import { errorHandlingMiddleware } from '../middlewares/error.middleware';
 import { ok } from '../utils/response';
 
 const baseHandler = async (event: APIGatewayProxyEvent) => {
+  console.log(event);
   const { body } = event;
   return ok('Successfully get the data', body);
 };
